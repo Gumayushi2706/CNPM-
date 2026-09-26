@@ -20,12 +20,7 @@ Hệ thống **Smart E-Mobility Hub** giải quyết bài toán:
 
 Hệ thống được thiết kế hoàn chỉnh để chạy trực tiếp trên **ổ D:** (`D:\smart_emobility_hub`) với môi trường Python:
 
-### Cách 1: Click đúp vào file `run.bat` (Khuyên dùng trên Windows)
-- Vào thư mục `D:\smart_emobility_hub`
-- Nhấp đúp chuột vào file **`run.bat`**
-- Hệ thống sẽ tự động khởi động máy chủ Web tại cổng 8000 và hiển thị thông báo.
-
-### Cách 2: Khởi chạy bằng lệnh Python trong Terminal / PowerShell
+### Cáách 1: Khởi chạy bằng lệnh Python trong Terminal / PowerShell
 ```powershell
 cd D:\smart_emobility_hub
 python run.py
@@ -34,7 +29,7 @@ Sau đó mở trình duyệt tại:
 - **Giao diện Dashboard trực quan:** [http://localhost:8000](http://localhost:8000)
 - **Tài liệu API Swagger tương tác:** [http://localhost:8000/docs](http://localhost:8000/docs)
 
-### Cách 3: Chạy thử nghiệm qua CLI (Dòng lệnh)
+### Cách 2: Chạy thử nghiệm qua CLI (Dòng lệnh)
 ```powershell
 cd D:\smart_emobility_hub
 python demo_cli.py
@@ -77,33 +72,15 @@ D:\smart_emobility_hub\
 │       │   └── js/app.js         # Leaflet Map ĐHQG, Chart.js KPI, tương tác thời gian thực
 │       └── templates/
 │           └── index.html        # Giao diện chính tích hợp 3 phân hệ
-├── docs/                         # Hồ sơ tài liệu thiết kế phần mềm (SE Submissions)
-│   ├── SUBMISSION_1_REQUIREMENTS.md # Yêu cầu chức năng, phi chức năng, Use-case specs
-│   ├── SUBMISSION_2_DIAGRAMS.md     # Sequence diagrams, Activity diagrams, State-charts
-│   ├── SUBMISSION_3_DESIGN.md       # Class diagram, Method descriptions, Test cases
-│   └── SYSTEM_ARCHITECTURE.md       # Kiến trúc tổng thể hệ thống
 ├── tests/                        # Bộ kiểm thử tự động
 │   ├── test_models.py
 │   ├── test_smart_scheduler.py
 │   ├── test_rebalance.py
 │   └── test_simulation.py
 ├── run.py                        # Script khởi chạy web server
-├── run.bat                       # Batch script 1-click chạy ngay trên Windows
 ├── demo_cli.py                   # Script chạy demo trên console
 └── README.md                     # Hướng dẫn chi tiết dự án
 ```
-
----
-
-## ⚡ Các Kịch Bản Mô Phỏng What-if
-
-Hệ thống hỗ trợ 5 kịch bản mô phỏng tương ứng đầy đủ với yêu cầu đề bài:
-1. **Metro Rush Hour Surge**: Sinh viên từ tuyến Metro số 1 đổ bộ ồ ạt vào giờ cao điểm sáng/chiều, kiểm tra cơ chế điều chuyển xe tăng viện từ KTX B và Thư viện về Ga Metro.
-2. **Hub Capacity Exhaustion**: Hub KTX Khu B cạn kiệt phương tiện hoặc bãi đỗ đầy 100%, hệ thống tự động kích hoạt cảnh báo sớm và gợi ý Hub thay thế (Fallback Hub).
-3. **Charging Demand Spike**: Hơn 30 phương tiện đồng loạt yêu cầu sạc, thuật toán xếp hàng đa tiêu chí (Priority Score) phân phối công suất luân phiên không để sập lưới điện.
-4. **Port Breakdown & Failover**: Hỏng hóc cổng sạc tại Ga Metro, hệ thống tự động cô lập an toàn và chuyển giao xe sang cổng dự phòng.
-5. **Cluster Imbalance**: Sự kiện quy mô lớn tại Nhà văn hóa Sinh viên làm hàng trăm xe dồn về cùng một điểm, hệ thống kích hoạt xe tải trung chuyển giải tỏa bãi đỗ.
-
 ---
 
 ## 👥 Danh Sách 6 Mobility Hubs Chiến Lược
